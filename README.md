@@ -5,8 +5,22 @@ Primus zkTLS react-native algorithm sdk
 ## Installation
 
 ```sh
+npm install react-native-get-random-values --save-dev
 npm install zktls-reactnative-core-sdk
 ```
+
+## IOS
+
+Add the following line to Podfile in your project
+
+```pod
+pod 'primus-zk', :path => '../node_modules/@fksyuan/zktls-reactnative-core-sdk/ios/PrimusZK.podspec'
+```
+
+
+## Android
+
+
 
 ## Usage
 
