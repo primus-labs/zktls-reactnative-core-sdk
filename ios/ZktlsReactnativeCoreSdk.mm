@@ -6,12 +6,6 @@ extern std::string try_callAlgorithm(std::string json_params);
 @implementation ZktlsReactnativeCoreSdk
 RCT_EXPORT_MODULE()
 
-- (NSNumber *)multiply:(double)a b:(double)b {
-  NSNumber *result = @(a * b);
-
-  return result;
-}
-
 - (void)callAlgorithm:(NSString *)a
               resolve:(RCTPromiseResolveBlock)resolve
                reject:(RCTPromiseRejectBlock)reject {

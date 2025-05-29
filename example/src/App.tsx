@@ -1,10 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'zktls-reactnative-core-sdk';
 import { useEffect, useState } from 'react';
 import { PrimusCoreTLS } from 'zktls-reactnative-core-sdk';
-
-
-const result0 = multiply(3, 7);
 
 
 export default function App() {
@@ -119,7 +115,7 @@ export default function App() {
         // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
         // await delay(800);
         const attestation = await zkTLS.startAttestation(generateRequestParamsRes);
-        setAttResult(attestation);
+        setAttResult(JSON.stringify(attestation));
         console.error("attestation=", attestation);
         console.error("attestation.data=", attestation.data);
         const verifyAttestationRes = zkTLS.verifyAttestation(attestation)
@@ -133,7 +129,6 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Result0: {result0}</Text>
       <Text>initResult: {initResult}</Text>
       <Text>attResult: {attResult}</Text>
     </View>

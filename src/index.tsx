@@ -7,15 +7,7 @@ import { encodeAttestation } from "./utils";
 import { assemblyParams } from './assembly_params';
 import { ZkAttestationError } from './classes/Error'
 import { AttestationErrorCode } from './config/error';
-import ZktlsReactnativeCoreSdk from './NativeZktlsReactnativeCoreSdk';
 import { init, getAttestation, getAttestationResult } from "./primus_zk";
-
-export function multiply(a: number, b: number): number {
-  return ZktlsReactnativeCoreSdk.multiply(a, b);
-}
-export function callAlgorithm(a: string): Promise<string> {
-  return ZktlsReactnativeCoreSdk.callAlgorithm(a);
-}
 
 
 class PrimusCoreTLS {
