@@ -58,7 +58,9 @@ android {
     main {
       java.srcDirs += [
         "generated/java",
-        "generated/jni"
+        "generated/jni",
+        "src/main/cpp/arm64-v8a/lib",
+        "src/main/jniLibs"
       ]
     }
   }
