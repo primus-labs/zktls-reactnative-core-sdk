@@ -167,7 +167,7 @@
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.zktlsreactnativecoresdk"
+      "javaPackageName": "xyz.primuslabs.algorithm"
     }
   },
   "create-react-native-library": {
