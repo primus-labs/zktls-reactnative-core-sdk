@@ -129,16 +129,37 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>initResult: {initResult}</Text>
-      <Text>attResult: {attResult}</Text>
+      <ResultLabel label="Init Result" value={initResult} />
+      <ResultLabel label="Attestation Result" value={attResult} />
     </View>
   );
 }
 
+const ResultLabel = ({ label, value }: { label: string; value: string }) => (
+  <View style={styles.resultItem}>
+    <Text style={styles.label}>{label}:</Text>
+    <Text style={styles.value}>{value}</Text>
+  </View>
+);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    padding: 20,
     justifyContent: 'center',
+    backgroundColor: '#f9f9f9',
+  },
+  resultItem: {
+    marginBottom: 16,
+  },
+  label: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#333',
+  },
+  value: {
+    fontSize: 15,
+    color: '#666',
   },
 });
+
