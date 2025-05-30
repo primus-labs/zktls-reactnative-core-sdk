@@ -5,9 +5,9 @@ Primus zkTLS react-native algorithm sdk
 ## Installation
 
 ```sh
-npm install zktls-reactnative-core-sdk
+npm install @primuslabs/zktls-reactnative-core-sdk
 # or
-yarn add zktls-reactnative-core-sdk
+yarn add @primuslabs/zktls-reactnative-core-sdk
 ```
 
 
@@ -16,7 +16,7 @@ yarn add zktls-reactnative-core-sdk
 Refer to the [Simple Example](https://docs.primuslabs.xyz/data-verification/core-sdk/simpleexample#zktls-modes), but import the package using the following:
 
 ```js
-import { PrimusCoreTLS } from 'zktls-reactnative-core-sdk';
+import { PrimusCoreTLS } from '@primuslabs/zktls-reactnative-core-sdk';
 
 // ...
 // See: https://docs.primuslabs.xyz/data-verification/core-sdk/simpleexample#implementation
