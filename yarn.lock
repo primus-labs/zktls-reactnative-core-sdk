@@ -3716,20 +3716,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 22.15.24
-  resolution: "@types/node@npm:22.15.24"
+  version: 22.15.26
+  resolution: "@types/node@npm:22.15.26"
   dependencies:
     undici-types: ~6.21.0
-  checksum: 664a33bf8cf7f4fe9c0512f40ab3e767f3990a20258a39bcbf0763093be34c4a731091894f0ccb8799494b142ce15582593f9e5fe7d0de337efff11bcd5c5678
+  checksum: d910e60ffddd83d08d74dbc0fca90e78100d2e4230405b07bb482104e7a17ea9e15c34ce8f5c9c7e4451c99fd718c4a6988932e9105bc6a202462aa4a67281aa
   languageName: node
   linkType: hard
 
 "@types/node@npm:^20.12.7":
-  version: 20.17.52
-  resolution: "@types/node@npm:20.17.52"
+  version: 20.17.54
+  resolution: "@types/node@npm:20.17.54"
   dependencies:
     undici-types: ~6.19.2
-  checksum: 36a6cfd07edc0d4fbd6eb18aa753096df5045cba9714c29a68932885cc6899316193f2f6d32a54062add20a144b49f35bfebe0d8e1979e34780190eecb0e8888
+  checksum: e10feb7cc9d53223691c155099ac52d5f91e48c351a1e1e2af0fdbf83181848cf7dc2c26782f4a646b67961054f6ed062df37575142c4e476547a966efcfc85d
   languageName: node
   linkType: hard
 
@@ -11459,6 +11459,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-uuid@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "react-native-uuid@npm:2.0.3"
+  checksum: e47774481feaed5d38f75fb4b03f5189c03e7452038f1b0fa56677add8a8bdef64ec7ad5e83f9fa761d8788cac5c8e554ade07e82a2818145337df7c883e2124
+  languageName: node
+  linkType: hard
+
 "react-native@npm:0.79.2":
   version: 0.79.2
   resolution: "react-native@npm:0.79.2"
@@ -13403,15 +13410,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^11.1.0":
-  version: 11.1.0
-  resolution: "uuid@npm:11.1.0"
-  bin:
-    uuid: dist/esm/bin/uuid
-  checksum: 840f19758543c4631e58a29439e51b5b669d5f34b4dd2700b6a1d15c5708c7a6e0c3e2c8c4a2eae761a3a7caa7e9884d00c86c02622ba91137bd3deade6b4b4a
-  languageName: node
-  linkType: hard
-
 "v8-compile-cache-lib@npm:^3.0.1":
   version: 3.0.1
   resolution: "v8-compile-cache-lib@npm:3.0.1"
@@ -13921,7 +13919,7 @@ __metadata:
     react: 19.0.0
     react-native: 0.79.2
     react-native-builder-bob: ^0.40.8
-    react-native-get-random-values: ^1.11.0
+    react-native-uuid: ^2.0.3
     release-it: ^17.10.0
     ts-jest: ^29.1.4
     ts-node: ^10.9.2
@@ -13929,7 +13927,6 @@ __metadata:
     turbo: ^1.10.7
     typescript: ^5.8.3
     url-parse: ^1.5.10
-    uuid: ^11.1.0
   peerDependencies:
     react: "*"
     react-native: "*"

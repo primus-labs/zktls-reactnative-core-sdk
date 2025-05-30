@@ -61,9 +61,8 @@
   "dependencies": {
     "@types/url-parse": "^1.4.11",
     "ethers": "^5.7.2",
-    "react-native-get-random-values": "^1.11.0",
-    "url-parse": "^1.5.10",
-    "uuid": "^11.1.0"
+    "react-native-uuid": "^2.0.3",
+    "url-parse": "^1.5.10"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",

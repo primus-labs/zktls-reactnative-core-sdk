@@ -1,5 +1,4 @@
-import 'react-native-get-random-values'; // UUUU
-import { v4 as uuidv4 } from 'uuid';
+import uuid from 'react-native-uuid';
 import { AttNetworkRequest, AttNetworkResponseResolve, SignedAttRequest } from './index.d'
 import { AlgorithmUrls } from './classes/AlgorithmUrls';
 import URLParse from 'url-parse';
@@ -10,7 +9,7 @@ export function assemblyParams(att: SignedAttRequest, algorithmUrls: AlgorithmUr
     let modelType = "proxytls";
     const { attRequest: { request, responseResolves, attMode, userAddress, appId, additionParams, sslCipher }, appSignature } = att
     let host = new URLParse(request.url).host; // UUUU
-    const requestid = uuidv4();
+    const requestid = uuid.v4();
     if (attMode?.algorithmType === "mpctls") {
         padoUrl = primusMpcUrl;
         modelType = "mpctls"
