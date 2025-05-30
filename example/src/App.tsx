@@ -6,6 +6,7 @@ import { PrimusCoreTLS } from 'zktls-reactnative-core-sdk';
 export default function App() {
   const [initResult, setInitResult] = useState("");
   const [attResult, setAttResult] = useState("");
+  const [verifyResult, setVerifyResult] = useState("");
   useEffect(() => {
     async function init() {
       // production
@@ -119,6 +120,7 @@ export default function App() {
         console.error("attestation=", attestation);
         console.error("attestation.data=", attestation.data);
         const verifyAttestationRes = zkTLS.verifyAttestation(attestation)
+        setVerifyResult(JSON.stringify(verifyAttestationRes));
         console.error("verifyAttestationRes=", verifyAttestationRes);
       } catch (e) {
         console.error(e);
@@ -131,6 +133,7 @@ export default function App() {
     <View style={styles.container}>
       <ResultLabel label="Init Result" value={initResult} />
       <ResultLabel label="Attestation Result" value={attResult} />
+      <ResultLabel label="Verify Result" value={verifyResult} />
     </View>
   );
 }
