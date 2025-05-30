@@ -5,33 +5,23 @@ Primus zkTLS react-native algorithm sdk
 ## Installation
 
 ```sh
-npm install react-native-get-random-values --save-dev
 npm install zktls-reactnative-core-sdk
+# or
+yarn add zktls-reactnative-core-sdk
 ```
-
-## IOS
-
-Add the following line to Podfile in your project
-
-```pod
-pod 'primus-zk', :path => '../node_modules/@fksyuan/zktls-reactnative-core-sdk/ios/PrimusZK.podspec'
-```
-
-
-## Android
-
 
 
 ## Usage
 
+Refer to the [Simple Example](https://docs.primuslabs.xyz/data-verification/core-sdk/simpleexample#zktls-modes), but import the package using the following:
 
 ```js
 import { PrimusCoreTLS } from 'zktls-reactnative-core-sdk';
 
 // ...
+// See: https://docs.primuslabs.xyz/data-verification/core-sdk/simpleexample#implementation
 const zkTLS = new PrimusCoreTLS();
 // ...
-
 ```
 
 ## Contributing
