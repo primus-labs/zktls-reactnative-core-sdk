@@ -1,5 +1,5 @@
 {
-  "name": "zktls-reactnative-core-sdk",
+  "name": "@primuslabs/zktls-reactnative-core-sdk",
   "version": "0.1.0",
   "description": "Primus zkTLS react-native algorithm sdk",
   "main": "./lib/module/index.js",

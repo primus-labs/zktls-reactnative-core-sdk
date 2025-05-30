@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "zktls-reactnative-core-sdk": ["./src/index"]
+      "@primuslabs/zktls-reactnative-core-sdk": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

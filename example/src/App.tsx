@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { useEffect, useState } from 'react';
-import { PrimusCoreTLS } from 'zktls-reactnative-core-sdk';
+import { PrimusCoreTLS } from '@primuslabs/zktls-reactnative-core-sdk';
 
 
 export default function App() {
