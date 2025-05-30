@@ -44,7 +44,7 @@ npm install --save @primuslabs/zktls-reactnative-core-sdk
 - Using yarn:
 
 ```text
-yarn add --save @primuslabs/zktls-reactnative-core-sdk
+yarn add @primuslabs/zktls-reactnative-core-sdk
 ```
 
 ### Importing the SDK
