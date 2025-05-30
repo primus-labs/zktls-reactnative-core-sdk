@@ -59,7 +59,7 @@ import { PrimusCoreTLS } from "@primuslabs/zktls-reactnative-core-sdk"
 
 The appSecret from Primus Developer Hub needs to sign the proof request parameters. For security reasons, appSecret cannot be configured on the Page side. The Test Example configures appSecret in the Page code to better illustrate the process.
 
-This Test Example guide will walk you through the fundamental steps to integrate Primus's zkTLS React Native Core SDK and complete a basic data verification process through your Page. You can learn about the integration process through this simple [demo](https://github.com/primus-labs/zktls-demo/blob/main/page-core-sdk-example/src/testprimus.js).
+This Test Example guide will walk you through the fundamental steps to integrate Primus's zkTLS React Native Core SDK and complete a basic data verification process through your Page. You can learn about the integration process through this simple [demo](https://github.com/primus-labs/zktls-demo/blob/main/reactnative-core-sdk-example/App.tsx).
 
 ### Implementation
 
