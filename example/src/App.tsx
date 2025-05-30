@@ -17,40 +17,59 @@ export default function App() {
       // const appSecret = "0x7da5d1cd2fdd494aa1176031151a6202734e30ddb14fd01dc3376616408ee0a7";
       try {
 
-        // 1
+        // Initialize parameters, the init function is recommended to be called when the program is initialized.
         const zkTLS = new PrimusCoreTLS();
-        const result = await zkTLS.init(appId, appSecret);
-        console.error("-------------init result=", result);
-        setInitResult(result.toString());
+        const initResult = await zkTLS.init(appId, appSecret);
+        console.log("primusProof initResult=", initResult);
+        setInitResult(initResult.toString());
 
-        // 2
-        let request ={
+        // Set request and responseResolves.
+        let request = {
           url: "https://www.okx.com/api/v5/public/instruments?instType=SPOT&instId=BTC-USD",
           method: "GET",
           header: {},
           body: ""
         };
+        // The responseResolves is the response structure of the url.
+        // For example the response of the url is: {"data":[{ ..."instFamily": "","instType":"SPOT",...}]}.
         const responseResolves = [
           {
-              keyName: 'instType',
-              parsePath: '$.data[0].instType',
-              parseType: 'string'
+            keyName: 'instType',
+            parsePath: '$.data[0].instType',
+            parseType: 'string'
           }
         ];
-        const generateRequestParamsRes = zkTLS.generateRequestParams(request, responseResolves)
-        console.error("-------------generateRequestParams result=", generateRequestParamsRes);
 
-        // 3.
+        // Generate attestation request.
+        const generateRequest = zkTLS.generateRequestParams(request, responseResolves);
+        console.log("-------------generateRequestParams result=", generateRequest);
+
+        // Set zkTLS mode, default is proxy model. (This is optional)
+        generateRequest.setAttMode({
+          algorithmType: "proxytls",
+          resultType: "plain"
+        });
+
         // Transfer request object to string.
-        const generateRequestStr = generateRequestParamsRes.toJsonString();
+        const generateRequestStr = generateRequest.toJsonString();
+
+        // Sign request.
         const signedRequestStr = await zkTLS.sign(generateRequestStr);
+
+        // Start attestation process.
         const attestation = await zkTLS.startAttestation(signedRequestStr);
         setAttResult(JSON.stringify(attestation));
-        console.error("attestation=", attestation);
-        console.error("attestation.data=", attestation.data);
-        const verifyAttestationRes = zkTLS.verifyAttestation(attestation)
-        setVerifyResult(JSON.stringify(verifyAttestationRes));
-        console.error("verifyAttestationRes=", verifyAttestationRes);
+        console.log("attestation=", attestation);
+
+        const verifyResult = zkTLS.verifyAttestation(attestation);
+        setVerifyResult(JSON.stringify(verifyResult));
+        console.log("verifyResult=", verifyResult);
+        if (verifyResult === true) {
+          // Business logic checks, such as attestation content and timestamp checks
+          // do your own business logic.
+        } else {
+          // If failed, define your own logic.
+        }
       } catch (e) {
         console.error(e);
       }
