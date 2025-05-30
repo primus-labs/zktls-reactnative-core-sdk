@@ -3,8 +3,10 @@ import { AttNetworkRequest, AttNetworkResponseResolve, SignedAttRequest } from '
 import { AlgorithmUrls } from './classes/AlgorithmUrls';
 import URLParse from 'url-parse';
 
-export function assemblyParams(att: SignedAttRequest, algorithmUrls: AlgorithmUrls) {
-    const { primusMpcUrl, primusProxyUrl, proxyUrl } = algorithmUrls
+export function assemblyParams(att: SignedAttRequest, algorithmUrls?: AlgorithmUrls) {
+    const primusMpcUrl = algorithmUrls? algorithmUrls.primusMpcUrl : "";
+    const primusProxyUrl = algorithmUrls? algorithmUrls.primusProxyUrl : "";
+    const proxyUrl = algorithmUrls? algorithmUrls.proxyUrl : "";
     let padoUrl = primusProxyUrl;
     let modelType = "proxytls";
     const { attRequest: { request, responseResolves, attMode, userAddress, appId, additionParams, sslCipher }, appSignature } = att
