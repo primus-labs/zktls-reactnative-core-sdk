@@ -12,7 +12,6 @@ export async function init() {
 
 export async function getAttestation(paramsObj: any) {
   const _paramsObj = { method: "getAttestation", version: "1.1.1", params: paramsObj };
-  console.log(_paramsObj);
   const params = JSON.stringify(_paramsObj);
   const result = await callAlgorithm(params);
   return JSON.parse(result);
